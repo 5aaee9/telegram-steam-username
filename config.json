@@ -1,0 +1,8 @@
+{
+    "api_key": "",
+    "user_id": "",
+    "telegram_id": "",
+    "telegram_hash": "",
+    "non_playing": "| Hi",
+    "playing": "| is playing {}"
+}
