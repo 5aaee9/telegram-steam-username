@@ -10,7 +10,7 @@ async def make_client() -> TelegramClient:
 
     return TelegramClient('steam_username', api_id, api_hash)
 
-async def start_client(client: TelegramClient) -> None:
+async def login_client(client: TelegramClient) -> None:
     # some side efflect
     password = input('Input your 2FA password: ')
     if password != '':

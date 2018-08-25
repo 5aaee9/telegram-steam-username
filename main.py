@@ -3,13 +3,11 @@ import time
 from src import bot, steam
 from src.config import get_config
 
-async def main(login: bool = False):
+async def main():
     steam_client = steam.Steam(get_config())
     bot_client = await bot.make_client()
-    if login:
-        await bot.start_client(bot_client)
-    else:
-        await bot_client.connect()
+    
+    await bot_client.connect()
 
     while True:
         status = await steam_client.pull_status()
