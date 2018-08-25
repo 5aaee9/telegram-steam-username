@@ -16,7 +16,7 @@ class Steam():
                 res = await r.json()
                 player = res['response']['players'][0]
 
-                if player['personastate'] == 3:
+                if 'gameextrainfo' in player:
                     return {
                         'gaming': True,
                         'game': player['gameextrainfo']
